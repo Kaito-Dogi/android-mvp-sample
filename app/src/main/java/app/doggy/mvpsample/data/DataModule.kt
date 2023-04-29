@@ -1,4 +1,4 @@
-package app.doggy.mvpsample.data.di
+package app.doggy.mvpsample.data
 
 import app.doggy.mvpsample.data.repository.CountRepositoryImpl
 import app.doggy.mvpsample.domain.repository.CountRepository
@@ -12,5 +12,5 @@ import dagger.hilt.components.SingletonComponent
 interface DataModule {
 
   @Binds
-  fun bindsCountRepository(impl: CountRepositoryImpl): CountRepository
+  fun bindCountRepository(impl: CountRepositoryImpl): CountRepository
 }
