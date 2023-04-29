@@ -4,7 +4,7 @@ import app.doggy.mvpsample.domain.model.Count
 import app.doggy.mvpsample.domain.repository.CountRepository
 import javax.inject.Inject
 
-class CountRepositoryImpl @Inject constructor() : CountRepository {
+internal class CountRepositoryImpl @Inject constructor() : CountRepository {
   private var count = Count()
 
   override fun getCount() = count

@@ -5,4 +5,4 @@ import app.doggy.mvpsample.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity(R.layout.activity_main)
+internal class MainActivity : AppCompatActivity(R.layout.activity_main)

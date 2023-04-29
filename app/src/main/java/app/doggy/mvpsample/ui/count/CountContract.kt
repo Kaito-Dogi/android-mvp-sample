@@ -4,7 +4,7 @@ import app.doggy.mvpsample.domain.model.Count
 import app.doggy.mvpsample.ui.BasePresenter
 import app.doggy.mvpsample.ui.BaseView
 
-sealed interface CountContract {
+internal sealed interface CountContract {
   interface View : BaseView<Presenter> {
     fun showCount(count: Count)
   }

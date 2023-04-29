@@ -3,7 +3,7 @@ package app.doggy.mvpsample.ui.count
 import app.doggy.mvpsample.domain.repository.CountRepository
 import javax.inject.Inject
 
-class CountPresenter @Inject constructor(
+internal class CountPresenter @Inject constructor(
   private val view: CountContract.View,
   private val repository: CountRepository,
 ) : CountContract.Presenter {

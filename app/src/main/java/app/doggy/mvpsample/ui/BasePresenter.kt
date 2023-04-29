@@ -1,5 +1,5 @@
 package app.doggy.mvpsample.ui
 
-interface BasePresenter {
+internal interface BasePresenter {
   fun onViewCreated()
 }
