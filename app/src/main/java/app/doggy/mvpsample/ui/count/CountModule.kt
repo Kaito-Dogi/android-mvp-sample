@@ -21,6 +21,7 @@ interface CountModule {
   fun bindPresenter(impl: CountPresenter): CountContract.Presenter
 }
 
+// TODO: 従来の MVP アーキテクチャの実装をもとに CountFragment の DI 方法を議論する
 @Module
 @InstallIn(ActivityComponent::class)
 object CountFragmentModule {
