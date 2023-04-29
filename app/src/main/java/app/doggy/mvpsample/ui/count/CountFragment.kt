@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import app.doggy.mvpsample.R
 import app.doggy.mvpsample.databinding.FragmentCountBinding
 import app.doggy.mvpsample.domain.model.Count
+import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -39,5 +40,9 @@ internal class CountFragment : Fragment(R.layout.fragment_count), CountContract.
 
   override fun showCount(count: Count) {
     binding.countText.text = count.value.toString()
+  }
+
+  override fun showError(message: String) {
+    Snackbar.make(binding.root, message, Snackbar.LENGTH_SHORT).show()
   }
 }

@@ -18,8 +18,13 @@ internal class CountPresenter @Inject constructor(
   }
 
   override fun onDecrementButtonClick() {
-    repository.decrementCount()
-    showCount()
+    runCatching {
+      repository.decrementCount()
+    }.onSuccess {
+      showCount()
+    }.onFailure {
+      view.showError(it.message ?: "an error has occurred")
+    }
   }
 
   private fun showCount() {

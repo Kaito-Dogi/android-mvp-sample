@@ -8,8 +8,10 @@ import app.doggy.mvpsample.ui.BaseView
  * View, Presenter 以外に継承されることを防ぐため sealed interface にした
  */
 internal sealed interface CountContract {
+
   interface View : BaseView<Presenter> {
     fun showCount(count: Count)
+    fun showError(message: String)
   }
 
   interface Presenter : BasePresenter {
