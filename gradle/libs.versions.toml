@@ -1,9 +1,11 @@
 [versions]
+androidGradlePlugin = "8.0.0"
 androidxAppcompat = "1.6.1"
 androidxCore = "1.10.0"
 androidxEspresso = "3.5.1"
 androidxTestExt = "1.1.5"
 junit4 = "4.13.2"
+kotlin = "1.8.20"
 material = "1.8.0"
 
 [libraries]
@@ -13,3 +15,7 @@ androidx-test-espresso-core = { group = "androidx.test.espresso", name = "espres
 androidx-test-ext = { group = "androidx.test.ext", name = "junit-ktx", version.ref = "androidxTestExt" }
 junit4 = { group = "junit", name = "junit", version.ref = "junit4" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+kotlin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
