@@ -13,7 +13,7 @@ import javax.inject.Inject
 class CountFragment : Fragment(R.layout.fragment_count), CountContract.View {
 
   @Inject
-  lateinit var presenter: CountPresenter
+  lateinit var presenter: CountContract.Presenter
 
   private var _binding: FragmentCountBinding? = null
   private val binding: FragmentCountBinding get() = _binding!!

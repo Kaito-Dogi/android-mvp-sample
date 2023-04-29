@@ -12,5 +12,5 @@ import dagger.hilt.components.SingletonComponent
 interface DataModule {
 
   @Binds
-  fun bindsCountRepository(impl: CountRepositoryImpl): CountRepository
+  fun bindCountRepository(impl: CountRepositoryImpl): CountRepository
 }
