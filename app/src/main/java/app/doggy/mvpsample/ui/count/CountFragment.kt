@@ -10,7 +10,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class CountFragment : Fragment(R.layout.fragment_count), CountContract.View {
+internal class CountFragment : Fragment(R.layout.fragment_count), CountContract.View {
 
   @Inject
   override lateinit var presenter: CountContract.Presenter

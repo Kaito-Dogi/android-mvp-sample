@@ -12,7 +12,7 @@ import dagger.hilt.android.components.FragmentComponent
 
 @Module
 @InstallIn(FragmentComponent::class)
-interface CountModule {
+internal interface CountModule {
 
   @Binds
   fun bindView(impl: CountFragment): CountContract.View
@@ -24,7 +24,7 @@ interface CountModule {
 // TODO: 従来の MVP アーキテクチャの実装をもとに CountFragment の DI 方法を議論する
 @Module
 @InstallIn(ActivityComponent::class)
-object CountFragmentModule {
+internal object CountFragmentModule {
 
   @Provides
   fun provideCountFragment(activity: Activity) =
