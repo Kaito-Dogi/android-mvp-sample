@@ -1,4 +1,4 @@
-package app.doggy.mvpsample.domain.repository
+package app.doggy.core.data
 
 interface CountRepository {
   fun getCount()
