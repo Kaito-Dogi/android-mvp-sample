@@ -1,5 +1,4 @@
 package app.doggy.mvpsample.domain
 
-data class Counter(
-  val value: Int,
-)
+@JvmInline
+value class Count(val value: Int = 0)
