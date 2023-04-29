@@ -1,6 +1,7 @@
 package app.doggy.mvpsample.ui.count
 
 import app.doggy.mvpsample.domain.model.Count
+import app.doggy.mvpsample.ui.BasePresenter
 import app.doggy.mvpsample.ui.BaseView
 
 sealed interface CountContract {
@@ -8,8 +9,7 @@ sealed interface CountContract {
     fun showCount(count: Count)
   }
 
-  interface Presenter {
-    fun onViewCreated()
+  interface Presenter : BasePresenter {
     fun onIncrementButtonClick()
     fun onDecrementButtonClick()
   }

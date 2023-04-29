@@ -21,6 +21,7 @@ class CountFragment : Fragment(R.layout.fragment_count), CountContract.View {
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
     _binding = FragmentCountBinding.bind(view)
+
     presenter.onViewCreated()
 
     binding.incrementButton.setOnClickListener {
