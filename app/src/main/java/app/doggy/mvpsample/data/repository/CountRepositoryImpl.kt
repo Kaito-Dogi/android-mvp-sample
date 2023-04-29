@@ -16,8 +16,6 @@ internal class CountRepositoryImpl @Inject constructor() : CountRepository {
 
   override fun decrementCount() {
     val currentValue = count.value
-    count =
-      if (currentValue > 0) Count(currentValue - 1)
-      else Count()
+    count = Count(currentValue - 1)
   }
 }
