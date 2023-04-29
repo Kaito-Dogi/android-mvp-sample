@@ -8,7 +8,7 @@ sealed interface CountContract {
   }
 
   interface Presenter {
-    fun onCreate()
+    fun onViewCreated()
     fun onIncrementButtonClick()
     fun onDecrementButtonClick()
   }

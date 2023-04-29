@@ -7,7 +7,7 @@ class CountPresenter @Inject constructor(
   private val view: CountContract.View,
   private val repository: CountRepository,
 ) : CountContract.Presenter {
-  override fun onCreate() {
+  override fun onViewCreated() {
     showCount()
   }
 
