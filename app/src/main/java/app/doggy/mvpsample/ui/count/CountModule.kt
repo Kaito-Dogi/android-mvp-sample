@@ -1,13 +1,10 @@
 package app.doggy.mvpsample.ui.count
 
-import android.app.Activity
-import androidx.appcompat.app.AppCompatActivity
-import app.doggy.mvpsample.R
+import androidx.fragment.app.Fragment
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ActivityComponent
 import dagger.hilt.android.components.FragmentComponent
 
 @Module
@@ -23,10 +20,9 @@ internal interface CountModule {
 
 // TODO: 従来の MVP アーキテクチャの実装をもとに CountFragment の DI 方法を議論する
 @Module
-@InstallIn(ActivityComponent::class)
+@InstallIn(FragmentComponent::class)
 internal object CountFragmentModule {
 
   @Provides
-  fun provideCountFragment(activity: Activity) =
-    (activity as AppCompatActivity).supportFragmentManager.findFragmentById(R.id.container) as CountFragment
+  fun provideCountFragment(fragment: Fragment) = fragment as CountFragment
 }
