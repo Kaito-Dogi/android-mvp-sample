@@ -16,6 +16,9 @@ internal class CountRepositoryImpl @Inject constructor() : CountRepository {
   }
 
   override fun decrementCount(): Count {
+    // ドメイン上の制約（Count は0以上）のため、0未満になる場合に例外を投げる
+    if (count.value == 0) throw IllegalStateException()
+
     val currentValue = count.value
     count = Count(currentValue - 1)
     return count

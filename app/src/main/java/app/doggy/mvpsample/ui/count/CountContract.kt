@@ -1,5 +1,6 @@
 package app.doggy.mvpsample.ui.count
 
+import androidx.annotation.StringRes
 import app.doggy.mvpsample.domain.model.Count
 import app.doggy.mvpsample.ui.BasePresenter
 import app.doggy.mvpsample.ui.BaseView
@@ -8,7 +9,7 @@ internal interface CountContract {
 
   interface View : BaseView<Presenter> {
     fun showCount(count: Count)
-    fun showError(message: String)
+    fun showError(@StringRes messageRes: Int)
   }
 
   interface Presenter : BasePresenter {

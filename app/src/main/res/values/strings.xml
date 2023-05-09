@@ -2,4 +2,6 @@
   <string name="app_name">MvpSample</string>
   <string name="button_increment_text">+</string>
   <string name="button_decrement_text">-</string>
+  <string name="error_invalid_value">value must be greater than or equal to 0</string>
+  <string name="error_something_else">an error has occurred</string>
 </resources>

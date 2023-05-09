@@ -1,6 +1,9 @@
 package app.doggy.mvpsample.ui.count
 
+import androidx.annotation.StringRes
+import app.doggy.mvpsample.R
 import app.doggy.mvpsample.domain.repository.CountRepository
+import java.lang.IllegalStateException
 import javax.inject.Inject
 
 internal class CountPresenter @Inject constructor(
@@ -24,7 +27,13 @@ internal class CountPresenter @Inject constructor(
     }.onSuccess {
       view.showCount(it)
     }.onFailure {
-      view.showError(it.message ?: "an error has occurred")
+      // TODO: エラーメッセージの通知方法を議論する
+      @StringRes
+      val message = when (it) {
+        is IllegalStateException -> R.string.error_invalid_value
+        else -> R.string.error_something_else
+      }
+      view.showError(message)
     }
   }
 }
