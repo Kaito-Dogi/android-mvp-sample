@@ -27,7 +27,7 @@ internal class CountPresenter @Inject constructor(
     }.onSuccess {
       view.showCount(it)
     }.onFailure {
-      // TODO: エラーメッセージの通知方法を議論する
+      // TODO: エラーメッセージの扱いを議論する
       @StringRes val errorMessageRes = when (it) {
         is IllegalStateException -> R.string.error_invalid_value
         else -> R.string.error_something_else
