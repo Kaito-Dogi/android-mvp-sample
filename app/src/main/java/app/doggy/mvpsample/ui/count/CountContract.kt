@@ -9,7 +9,7 @@ internal interface CountContract {
 
   interface View : BaseView<Presenter> {
     fun showCount(count: Count)
-    fun showError(@StringRes messageRes: Int)
+    fun showError(@StringRes errorMessageRes: Int)
   }
 
   interface Presenter : BasePresenter {

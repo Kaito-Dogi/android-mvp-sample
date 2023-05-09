@@ -16,6 +16,7 @@ internal class CountRepositoryImpl @Inject constructor() : CountRepository {
   }
 
   override fun decrementCount(): Count {
+    // TODO: Result 型を使用し、例外を投げないよう修正してみる（https://speakerdeck.com/okuzawats/li-wai-wotou-geruna-zhi-wofan-se?slide=15）
     // ドメイン上の制約（Count は0以上）のため、0未満になる場合に例外を投げる
     if (count.value == 0) throw IllegalStateException()
 

@@ -42,7 +42,7 @@ internal class CountFragment : Fragment(R.layout.fragment_count), CountContract.
     binding.countText.text = count.value.toString()
   }
 
-  override fun showError(messageRes: Int) {
-    Snackbar.make(binding.root, requireContext().getText(messageRes), Snackbar.LENGTH_SHORT).show()
+  override fun showError(errorMessageRes: Int) {
+    Snackbar.make(binding.root, requireContext().getText(errorMessageRes), Snackbar.LENGTH_SHORT).show()
   }
 }
