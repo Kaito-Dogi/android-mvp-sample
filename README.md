@@ -17,3 +17,7 @@
 | 初期状態 | カウント時 | エラー時 |
 |:--:|:--:|:--:|
 | <img src="https://github.com/Kaito-Dogi/android-sample-mvp/assets/49048577/cb970a22-9f0e-4736-b2f3-7e5ece038ea6" width="300px" alt="mvp_count_init" /> | <img src="https://github.com/Kaito-Dogi/android-sample-mvp/assets/49048577/2c093892-bcdd-4195-b82e-b4ada760b404" width="300px" alt="mvp_count_incr" /> | <img src="https://github.com/Kaito-Dogi/android-sample-mvp/assets/49048577/2aa8f1d1-cf6b-4919-9020-7ae808f534c3" width="300px" alt="mvp_count_error" /> |
+
+## 参考
+- [Android アプリ設計パターン入門](https://peaks.cc/books/architecture_patterns)
+- [【Android】MVPパターンでカウンターアプリを作る](https://qiita.com/Kotaro666-dev/items/85984df37a99c34d5ca6)
