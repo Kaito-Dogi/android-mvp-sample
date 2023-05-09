@@ -4,6 +4,6 @@ import app.doggy.mvpsample.domain.model.Count
 
 interface CountRepository {
   fun getCount(): Count
-  fun incrementCount()
-  fun decrementCount()
+  fun incrementCount(): Count
+  fun decrementCount(): Count
 }

@@ -9,26 +9,22 @@ internal class CountPresenter @Inject constructor(
 ) : CountContract.Presenter {
 
   override fun onViewCreated() {
-    showCount()
+    val count = repository.getCount()
+    view.showCount(count)
   }
 
   override fun onIncrementButtonClick() {
-    repository.incrementCount()
-    showCount()
+    val newCount = repository.incrementCount()
+    view.showCount(newCount)
   }
 
   override fun onDecrementButtonClick() {
     runCatching {
       repository.decrementCount()
     }.onSuccess {
-      showCount()
+      view.showCount(it)
     }.onFailure {
       view.showError(it.message ?: "an error has occurred")
     }
-  }
-
-  private fun showCount() {
-    val count = repository.getCount()
-    view.showCount(count)
   }
 }
